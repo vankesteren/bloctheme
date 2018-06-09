@@ -1,0 +1,192 @@
+/* Variable stuff */
+{{ $titlekey := lower .Title }}
+{{ $primary := index .Site.Params.primaries $titlekey }}
+
+html {
+  font-family: Fira Sans;
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding: 0;
+}
+body{
+  margin:0;
+}
+
+a {
+  text-decoration: none;
+  color: {{ $primary | default "#499293" }};
+}
+
+.hljs {
+  font-family: Fira Code;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+code {
+  font-family: Fira Code;
+  font-weight: 400;
+}
+
+.maincontainer {
+  margin: 0;
+  background-color: #FAFAFA;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.centraliser {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.titlecontainer {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 16rem;
+  margin-right: 12rem;
+}
+
+.maintitle {
+  margin-top: 2rem;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3rem;
+  color: #fff;
+  background-color: {{ .Site.Params.primaries.about }};
+}
+
+.maintitle:hover {
+  box-shadow: 0px 0px 5px #00000055;
+  margin-top: 1.8rem;
+  padding-bottom: 0.7rem;
+}
+
+.contentcontainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 12rem;
+  margin-right: 5rem;
+  max-width: 90rem;
+}
+
+.outercontent {
+  z-index:2;
+  display: inline-block;
+  padding: 4rem;
+  padding-top: 1rem;
+  background: #fff;
+  width: 100%;
+  box-shadow: 2px 2px 10px #00000088;
+}
+
+.pagetitlewrapper {
+  display: inline-block;
+}
+
+.pagetitle {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  padding-left: 7rem;
+}
+
+.pagetitle h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  font-style: italic;
+  align-self: center;
+  color: {{ .Site.Params.colours.title }};
+}
+
+.spacer {
+   flex-grow: 2;
+}
+
+.pagetitle .spacer {
+  min-width: 8rem;
+}
+
+.icon {
+  align-self: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius:50%;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.linkitem {
+  color: #fff;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  background-color: {{ $primary }};
+}
+
+.linkitem:hover {
+  text-decoration: none;
+  box-shadow: 0px 0px 5px #00000055;
+}
+
+.innerContent {
+  display: inline-block;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colourbar {
+  z-index: 0;
+  display: inline-block;
+  margin-top: 4rem;
+  width: 4rem;
+  background-color: {{ $primary }};
+}
+
+.menu {
+  z-index: 2;
+  position: fixed;
+  display: inline-block;
+  margin-left: -12.5rem;
+}
+.menu .links {
+  padding: 0;
+}
+.menu .links .linkitem {
+  font-size: 1.5rem;
+  box-shadow: 0px 0px 5px #00000055;
+}
+
+.menu .links .linkitem:hover {
+  box-shadow: 0px 0px 10px #00000055;
+}
+
+.innerContent a {
+  font-weight: 400;
+}

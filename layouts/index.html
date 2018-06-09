@@ -1,0 +1,41 @@
+{{ partial "header" . }}
+
+<div class="maincontainer">
+  <div class="centraliser">
+    <div class="titlecontainer">
+      <a href="{{.Site.BaseURL}}" class="maintitle">
+        {{ .Site.Title }}
+      </a>
+    </div>
+    <div class="contentcontainer">
+      <div class="outercontent">
+        <div class="menu">
+          <div class="links">
+            <div class="spacer"></div>
+            <a class="linkitem" href="blog" style="background-color:{{.Site.Params.primaries.blog}}"> Blog </a>
+            <a class="linkitem" href="software" style="background-color:{{.Site.Params.primaries.software}}"> Software </a>
+            <a class="linkitem" href="presentations" style="background-color:{{.Site.Params.primaries.presentations}}"> Presentations </a>
+            <a class="linkitem" href="publications" style="background-color:{{.Site.Params.primaries.publications}}"> Publications </a>
+            <div class="spacer"></div>
+          </div>
+        </div>
+        <div class="innerContent">
+          <div class="pagetitle">
+            <h1> {{ .Title }} </h1>
+            <div class="spacer"></div>
+            <img src="img/{{.Site.Params.icon}}" class="icon"></img>
+            <div class="links">
+              {{ range .Site.Params.mainlinks }}
+                <a class="linkitem" href="{{.ref}}"> <i class="{{.icon}}"></i>&nbsp; {{.text}} </a>
+              {{ end }}
+            </div>
+          </div>
+          <div class="content">
+            {{.Content}}
+          </div>
+        </div>
+      </div>
+      <div class="colourbar"></div>
+    </div>
+  </div>
+</div>
