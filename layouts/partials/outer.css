@@ -242,4 +242,7 @@ code {
   .maincontainer img {
     width: 100%;
   }
+  .innerContent a {
+    white-space: normal;
+  }
 }
