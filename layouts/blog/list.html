@@ -3,7 +3,7 @@
 <div class="maincontainer">
   <div class="centraliser">
     <div class="titlecontainer">
-      <a href="{{ .Site.BaseURL }}" class="maintitle">
+      <a href="../" class="maintitle">
         {{ .Site.Title }}
       </a>
     </div>
@@ -28,7 +28,7 @@
               {{ range (where .Data.Pages "Params.draft" "!=" true).GroupByDate "Jan, 2006" "desc"}}
                   {{ range sort .Pages "Date" "desc" }}
                       {{ partial "li.html" . }}
-                      <span style="padding: 0 2rem 2rem 2rem;"> {{ .Description }} </span> 
+                      <span style="padding: 0 2rem 2rem 2rem;"> {{ .Description }} </span>
                   {{ end }}
               {{ end }}
             </div>
