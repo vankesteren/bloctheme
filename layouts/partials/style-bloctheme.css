@@ -59,9 +59,9 @@ code {
   padding-right: 1rem;
   font-weight: 400;
   font-style: italic;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
-  background-color: {{ .Site.Params.primaries.about }};
+  background-color: {{ .Site.Params.primaries.about | default "#499293" }};
 }
 
 .maintitle:hover {
@@ -182,67 +182,13 @@ code {
 }
 .menu .links .linkitem {
   font-size: 1.5rem;
-  box-shadow: 0px 0px 5px #00000055;
+  box-shadow: 2px 2px 10px #00000088;
 }
 
 .menu .links .linkitem:hover {
-  box-shadow: 0px 0px 10px #00000055;
+  box-shadow: 2px 2px 13px #000000AA;
 }
 
 .innerContent a {
   font-weight: 400;
-}
-
-
-/* Mobile/responsive stuff */
-@media only screen and (max-width: 768px) {
-  .menu {
-    position: relative;
-    display: block;
-    margin-left: auto;
-  }
-  .pagetitle {
-    flex-wrap: wrap;
-    padding: 1rem 5% !important;
-    min-width: 0 !important;
-  }
-  .pagetitle .links {
-    display: none;
-  }
-  .pagetitle h1 {
-    display: block;
-    font-size: 3rem;
-  }
-  .pagetitle .spacer {
-    display: none;
-  }
-  .contentcontainer {
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-  .maintitle {
-    font-size: 1.5rem;
-  }
-  .menu .links .linkitem {
-    font-size: 1rem;
-  }
-  .outercontent {
-    padding: 2%;
-  }
-  .innerContent {
-    max-width: 80vw;
-  }
-  .icon {
-    margin: 0 auto;
-    width: 8rem !important;
-  }
-  .titlecontainer {
-    margin: 0 6rem;
-  }
-  .maincontainer img {
-    width: 100%;
-  }
-  .innerContent a {
-    white-space: normal;
-  }
 }

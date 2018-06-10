@@ -1,0 +1,93 @@
+/* Variable stuff */
+{{ $titlekey := lower .Title }}
+{{ $primary := index .Site.Params.primaries $titlekey }}
+
+/* Mobile/responsive stuff */
+@media only screen and (max-width: 1248px) {
+  /* Update menu */
+  .menu {
+    position: relative;
+    display: block;
+    margin-left: auto;
+  }
+  .menu .links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .menu .links .linkitem {
+    font-size: 1rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: flex-start;
+    text-align: center;
+    box-shadow: 0px 0px 5px #00000055;
+  }
+  .menu .links .linkitem:hover {
+    box-shadow: 0px 0px 10px #00000055;
+  }
+  .menu .links .spacer {
+    display: none;
+  }
+
+  /* Realign page title to be vertical */
+  .pagetitle {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1rem 5% !important;
+    min-width: 0 !important;
+  }
+  .pagetitle .links {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .pagetitle .links a {
+    white-space: nowrap;
+  }
+  .pagetitle h1 {
+    display: block;
+    font-size: 3rem;
+    margin: 1rem auto;
+  }
+  .pagetitle .spacer {
+    display: none;
+  }
+  .icon {
+    width: 8rem !important;
+    height: 8rem;
+  }
+
+
+  /* the rest */
+
+  .titlecontainer {
+    margin-top: 0;
+    margin-left: 2%;
+    margin-right: 4rem;
+    padding-right: 1%;
+  }
+  .maintitle {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .maincontainer img {
+    width: 100%;
+  }
+  .contentcontainer {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .outercontent {
+    padding: 1rem;
+  }
+  .innerContent {
+    max-width: 80vw;
+  }
+  .innerContent a {
+    white-space: normal;
+  }
+}
