@@ -3,7 +3,7 @@
 {{ $primary := index .Site.Params.primaries $titlekey }}
 
 /* Mobile/responsive stuff */
-@media only screen and (max-width: 1248px) {
+@media only screen and (max-width: 1126px) {
   /* Update menu */
   .menu {
     position: relative;

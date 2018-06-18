@@ -1,3 +1,11 @@
-{{.Title}}
-
-{{.Content}}
+<html>
+<head>
+  <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+  <meta http-equiv="refresh" content="0; url={{ .Params.link | relURL }}" />
+</head>
+<body>
+<div style="width:100%;font-family:Fira Sans;font-style: italic;text-align:center;">
+<h1 style="display:inline-block;margin:5rem;"><a href="{{ .Params.link | relURL }}" style="color:#121212;">Redirect</a></h1>
+</div>
+</body>
+</html>
