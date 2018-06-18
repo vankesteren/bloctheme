@@ -1,4 +1,4 @@
-<a class="softwarecontainer" href="{{ .URL }}">
+<a class="softwarecontainer" href="{{ .URL | relURL }}">
   <div class="itemtitle">{{ .Title }}</div>
   <div class="spacer"></div>
   <img src="{{ .Params.image }}"></img>

@@ -32,8 +32,6 @@ code {
   margin: 0;
   background-color: #FAFAFA;
   min-height: 100vh;
-  min-width: 100vw;
-  max-width: 100vw;
   display: flex;
   justify-content: center;
 }
